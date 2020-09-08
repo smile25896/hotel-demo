@@ -1,0 +1,281 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Kumbh Sans', 'Microsoft JhengHei', sans-serif;
+  /* font-family: 'Playfair Display', 'Microsoft JhengHei',  serif; */
+}
+
+header{
+  height: 90px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.title{
+  color: #7d6955;
+  position: relative;
+}
+
+.title-line{
+  position: absolute;
+  background: #7d6955;
+  bottom: -5px;
+  height: 1px;
+  width: 50px;
+  left: calc(50% - 25px);
+}
+
+.logo{
+  font-family: 'Playfair Display', 'Microsoft JhengHei',  serif;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  color: #7d6955;
+}
+
+.logo img{
+  width: 55px;
+}
+
+.logo .name{
+  margin-left: 10px;
+}
+
+.top-img{
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-image: url('./img/main-big.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.top-img img{
+  width: 100%;
+}
+
+main>div{
+  padding: 60px 30px;
+}
+
+.intro{
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  /* opacity: 0.5; */
+}
+
+.intro>div, .news>div{
+  margin: 0 60px;
+  flex: 1;
+}
+
+.intro>.img{
+  margin-right: 0;
+}
+
+.intro .img img{
+  width: 100%;
+}
+
+.intro .text .title{
+  margin-bottom: 0.6em;
+  font-size: 1.3em;
+}
+
+.intro .text .content{
+  line-height: 1.4em;
+  color: #777;
+}
+
+.position{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h2{
+  font-size: 2em;
+  text-align: center;
+}
+
+.position .content{
+  margin-top: 20px; 
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.position .content .item{
+  position: relative;
+  /* flex: 1; */
+  width: 20%;
+  margin: 0 10px;
+  /* overflow: hidden; */
+  text-align: center;
+  margin: 30px 10px;
+}
+
+
+.position .content .item:hover .img{
+  opacity: 1;
+  border-color: #786653;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.position .content .item:hover .title{
+  opacity: 0;
+}
+
+.position .content .item .title{
+  z-index: 9;
+  font-size: 1.5em;
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  top: calc(50% - 0.3em);
+  transition: opacity .3s;
+  /* color: #39b2bd; */
+}
+
+.position .content .item .img{
+  border-radius: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  transition: opacity .3s;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.news .content{
+  margin-top: 30px;
+}
+
+.news .item{
+  display: flex;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.news .item:last-child{
+  margin-bottom: 0px;
+}
+
+.news .item:hover{
+  background: #fdfff0;
+}
+
+.news .item .img{
+  width: 30%;
+  padding-bottom: 26%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.news .item .right-box{
+  padding-left: 20px;
+  line-height: 1.6em;
+  flex: 1;
+}
+
+.news .item .right-box h2{
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.news .item .right-box .second-title{
+  font-size: 1em;
+  color: #777;
+}
+
+footer{
+  color: #efefef;
+  /* height: 180px; */
+  background-color: #7d6955;
+  padding: 30px 90px;
+}
+
+footer .title{
+  font-size: 1.6em;
+  color: #efefef;
+  font-family: 'Playfair Display', 'Microsoft JhengHei',  serif;
+  margin-bottom: 0.6em;
+}
+
+footer .info{
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+@media only screen and (max-width: 960px){
+  main>div{
+    padding: 60px 0px;
+  }
+
+  .intro>div{
+    margin: 0 30px;
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 720px){
+
+  .position .content{
+    flex-wrap: wrap;
+  }
+
+  .position .content .item{
+    width: 42%;
+  }
+
+  .news .item{
+    flex-direction: column;
+  }
+
+  .news .item .img{
+    flex-direction: column;
+    width: calc(100% - 40px);
+    padding-bottom: 60%;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 560px){
+
+  .intro{
+    flex-direction: column;
+    margin: 0px 50px;
+  }
+
+  .intro>div{
+    margin: 20px 0px;
+  }
+
+  .top-img{
+    height: 50vh;
+  }
+
+  .position .content .item .img{
+    opacity: 1;
+  }
+  
+  .position .content .item .title{
+    top: calc(100% + 0.5em);
+    font-size: 1em;
+  }
+}
