@@ -17,7 +17,7 @@ $(window).scroll(function (event) {
 
 
       // if(scrolled < sectionIds.intro-500 || scrolled > sectionIds.intro+500){
-        var diff = sectionIds.intro - scrolled-200
+        var diff = sectionIds.intro - scrolled-300
         if(diff<0){
           $('.intro').css("opacity", 1);
         }

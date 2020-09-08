@@ -103,9 +103,24 @@ main>div{
   opacity: 1;
 }
 
+.news .item>div:first-child{
+  flex: 1;
+}
+
+.news .item>div:last-child{
+  flex: 4;
+}
+
+.intro>div:first-child{
+  flex: 1;
+}
+
+.intro>div:last-child{
+  flex: 1;
+}
+
 .intro>div, .news>div{
   margin: 0 60px;
-  flex: 1;
 }
 
 .intro>.img{
@@ -197,6 +212,7 @@ h2{
 }
 
 .news .item{
+  position: relative;
   display: flex;
   margin-bottom: 50px;
   padding: 20px;
@@ -214,8 +230,7 @@ h2{
 }
 
 .news .item .img{
-  width: 30%;
-  padding-bottom: 26%;
+  padding-bottom: 20%;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -263,9 +278,31 @@ footer .info{
 
   .intro>div{
     margin: 0 30px;
-    flex: 1;
+  }
+
+  
+  /* .news .item>div:first-child, .intro>div:first-child{
+    flex: 2;
+  }
+
+  .news .item>div:last-child, .intro>div:last-child{
+    flex: 3;
+  } */
+}
+@media only screen and (max-width: 1024px){
+  .news .item .img{
+    padding-bottom: 45%;
+  }
+
+  .news .item>div:first-child, .intro>div:first-child{
+    flex: 2;
+  }
+
+  .news .item>div:last-child, .intro>div:last-child{
+    flex: 3;
   }
 }
+
 
 @media only screen and (max-width: 720px){
 
