@@ -88,11 +88,15 @@ main{
 }
 
 main>div{
-  padding: 60px 30px;
+  padding: 100px 30px 10px;
+}
+
+.position{
+  padding-bottom: 100px;
 }
 
 .intro{
-  padding-top: 80px;
+  padding-top: 100px;
   display: flex;
   align-items: center;
   opacity: 0;
