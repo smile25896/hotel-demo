@@ -357,7 +357,7 @@ footer .info{
     margin: 0px 50px;
   }
 
-  .intro>div{
+  .intro>div, .new>div{
     margin: 20px 0px;
   }
 
