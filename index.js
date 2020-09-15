@@ -6,7 +6,6 @@ $(".section").each(function () {
     sectionIds[$this.attr("id")] = $this.first().offset().top;
 });
 
-console.log(sectionIds)
 
 $(window).scroll(function (event) {
   var scrolled = $(this).scrollTop();
@@ -16,7 +15,6 @@ $(window).scroll(function (event) {
         var c = $("[data-id=" + key + "]");
         c.addClass("active");
       }
-      console.log(key)
       if((key==='top-img-logo' && scrolled >= 0 && scrolled < 500)
         || (key!=='top-img-logo' && scrolled > sectionIds[key]-500)){
         $(`.${key}`).addClass('active')
