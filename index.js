@@ -1,3 +1,5 @@
+
+
 var sectionIds = {};
 $(".section").each(function () {
     var $this = $(this);
@@ -14,16 +16,16 @@ $(window).scroll(function (event) {
         var c = $("[data-id=" + key + "]");
         c.addClass("active");
       }
-
-
-      // if(scrolled < sectionIds.intro-500 || scrolled > sectionIds.intro+500){
-        var diff = sectionIds.intro - scrolled-100
-        if(diff<0){
-          $('.intro').css("opacity", 1);
-        }
-        else{
-          $('.intro').css("opacity", (500-diff)/500);
-        }
+      console.log(key)
+      if((key==='top-img-logo' && scrolled >= 0 && scrolled < 500)
+        || (key!=='top-img-logo' && scrolled > sectionIds[key]-500)){
+        $(`.${key}`).addClass('active')
+        // console.log('---')
+      }
+      else{
+        $(`.${key}`).removeClass('active')
+      }
+        
         // else{
         //   $('.intro').css("opacity", 0.2);
         // }
